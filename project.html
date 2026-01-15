@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DYP DPU 2026 | DR.D.Y.PATIL ACS COLLEGE</title>
+
+    <link rel="stylesheet" href="project.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="progress-wrap"><div class="progress-bar"></div></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+    <div class="logo-box">
+        <img src="logo.png" alt="DYP DPU Logo" class="logo-img">
+    </div>
+    <span class="logo-text">DYP DPU</span>
+</div>
+
+        <div class="nav-links">
+            <a href="#about">Mission</a>
+            <a href="#pillars">Pillars</a>
+            <a href="#pledge" class="btn-nav">Join Movement</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-box">
+            <span class="tagline">Official Student Initiative 2026</span>
+            <h1>United by <span class="gradient-text">Diversity</span>,<br>Driven by <span class="gradient-text">Integrity</span></h1>
+            <p>Empowering the youth of Dr. D. Y. Patil College to build a harmonious nation through technology, empathy, and innovation.</p>
+            <div class="hero-btns">
+                <a href="#pillars" class="btn-primary">Explore Theme</a>
+                <div class="live-indicator">● Live Activity</div>
+            </div>
+            <div class="animated-hero-text">
+                <span id="dynamic-text">Cultural Respect.</span>
+            </div>
+        </div>
+        <canvas id="particle-canvas"></canvas>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="about" class="mission-section">
+        <div class="container">
+            <h2>Our Mission</h2>
+            <p>To instill integrity, leadership, and unity in every student of DYP College through awareness, innovation, and active participation. We celebrate diversity, promote empathy, and empower youth to become change-makers.</p>
+        </div>
+    </section>
+
+    <!-- Pillars Section -->
+    <section id="pillars" class="container">
+        <div class="section-header">
+            <h2>The Four Pillars of Integrity</h2>
+            <p>Our commitment to a stronger, inclusive India, led by young changemakers.</p>
+        </div>
+        <div class="grid">
+            <div class="glass-card">
+                <div class="card-icon">01</div>
+                <h3>Cultural Respect</h3>
+                <p>Honoring traditions, faiths, and communities. Diversity strengthens our unity.</p>
+            </div>
+            <div class="glass-card">
+                <div class="card-icon">02</div>
+                <h3>Global Harmony</h3>
+                <p>Fostering peace, empathy, and collaboration beyond borders. Integrity is doing right, even when unseen.</p>
+            </div>
+            <div class="glass-card">
+                <div class="card-icon">03</div>
+                <h3>Youth Leadership</h3>
+                <p>Harnessing technology and innovation to empower peers and fight misinformation.</p>
+            </div>
+            <div class="glass-card">
+                <div class="card-icon">04</div>
+                <h3>One Team Nation</h3>
+                <p>Building bridges across states and languages. Collective progress requires teamwork.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pledge Section -->
+    <section id="pledge" class="pledge-area">
+        <div class="pledge-content">
+            <h2>Take the National Oath</h2>
+            <div class="oath-box">
+                <p id="oath-text">"I pledge to celebrate our differences and work for the collective progress of my country." </p>
+                
+                <button onclick="signPledge()" id="signBtn">  Sign Digitally</button>
+            </div>
+            <p class="stats" id="pledge-stats">Join <span id="count">452</span> students who signed today.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Designed by Vansh More | Department of Computer Science | 2026 | <span class="gradient-text">Integrity in Action</span></p>
+    </footer>
+
+    <script src="project.js"></script>
+</body>
+</html>
