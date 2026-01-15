@@ -1,0 +1,199 @@
+:root {
+    --bg: #f5faff;
+    --text: #1d1d1f;
+    --accent: #138808;
+    --accent2: #ff9933;
+    --glass: rgba(255, 255, 255, 0.7);
+    --gradient: linear-gradient(90deg, #ff9933, #138808);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Plus Jakarta Sans', sans-serif; scroll-behavior:smooth; }
+body { background-color: var(--bg); color: var(--text); overflow-x:hidden; }
+
+/* Progress Bar */
+.progress-wrap { position: fixed; top:0; left:0; width:100%; height:5px; background: rgba(0,0,0,0.05); z-index:9999; }
+.progress-bar { width:0; height:100%; background: var(--accent); transition: width 0.3s ease; }
+
+/* Navbar */
+.navbar { position: fixed; width: 100%; padding:20px 8%; display:flex; justify-content:space-between; align-items:center; background: var(--glass); backdrop-filter: blur(20px); z-index:1000; }
+.nav-links a { margin-left:25px; font-weight:500; }
+.btn-nav { padding:8px 18px; background: var(--accent); color:#fff; border-radius:30px; transition:0.3s; font-weight:600; box-shadow:0 0 10px rgba(19,136,8,0.5);}
+.btn-nav:hover { background: var(--accent2); box-shadow:0 0 20px rgba(255,153,51,0.6);}
+.logo-img { width:50px; vertical-align: middle; margin-right:10px; }
+.logo-text { font-weight:800; font-size:1.8rem; background: linear-gradient(90deg,#ff9933,#138808); -webkit-background-clip:text; -webkit-text-fill-color:transparent; transition:0.3s;}
+.logo:hover .logo-text { transform: scale(1.1); }
+
+/* Gradient Text */
+.gradient-text { background: var(--gradient); -webkit-background-clip:text; -webkit-text-fill-color:transparent; animation: gradientMove 3s linear infinite; }
+
+/* Hero Section */
+.hero { height:100vh; display:flex; align-items:center; justify-content:center; background: radial-gradient(circle at top right, #e0f2ff, #ffffff); position:relative; overflow:hidden; }
+.hero-box { text-align:center; max-width:900px; animation: fadeInUp 1s ease forwards; z-index:2; position:relative; }
+h1 { font-size:4rem; font-weight:800; line-height:1.1; margin-bottom:25px; text-shadow:0 2px 10px rgba(19,136,8,0.2); }
+.tagline { font-weight:500; color:#555; letter-spacing:1px; }
+.hero-btns { margin-top:25px; display:flex; justify-content:center; gap:15px; align-items:center; }
+.btn-primary { padding:12px 28px; background: var(--accent); color:#fff; border-radius:40px; font-weight:600; transition:0.3s; box-shadow:0 0 10px rgba(19,136,8,0.3);}
+.btn-primary:hover { background: var(--accent2); box-shadow:0 0 20px rgba(255,153,51,0.5);}
+.live-indicator { color:#ff0000; font-weight:700; animation: blink 1.2s infinite; }
+.animated-hero-text { margin-top:15px; font-size:1.5rem; font-weight:500; color: var(--accent); animation: pulse 2s infinite; }
+
+/* Particle Canvas */
+#particle-canvas { position:absolute; top:0; left:0; width:100%; height:100%; z-index:1; pointer-events:none; }
+
+/* Mission Section */
+.mission-section { padding:80px 8%; background: linear-gradient(120deg, #f0faff, #ffffff); border-radius:20px; margin:50px auto; text-align:center; box-shadow:0 0 30px rgba(0,102,204,0.1); }
+
+/* Pillars Section */
+.container { padding:80px 8%; }
+.section-header { text-align:center; margin-bottom:50px; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:30px; }
+.glass-card { background: var(--glass); padding:35px; border-radius:30px; border:1px solid rgba(255,255,255,0.4); transition:all 0.5s ease; box-shadow:0 15px 40px rgba(0,0,0,0.05); backdrop-filter:blur(15px); }
+.glass-card:hover { transform: translateY(-15px) scale(1.06); box-shadow:0 0 30px rgba(19,136,8,0.5); border-color: var(--accent2); }
+
+/* Pledge Section */
+.pledge-area { padding:80px 8%; background: linear-gradient(160deg, #e0f7ff, #ffffff); border-radius:40px; margin:50px; text-align:center; box-shadow:0 0 30px rgba(19,136,8,0.2);}
+.oath-box { background: var(--glass); padding:35px; border-radius:25px; display:inline-block; margin-top:20px; }
+#signBtn { padding:12px 28px; background: var(--accent); color:#fff; border-radius:40px; font-weight:600; cursor:pointer; transition:0.3s; box-shadow:0 0 10px rgba(19,136,8,0.3);}
+#signBtn:hover { background: var(--accent2); box-shadow:0 0 20px rgba(255,153,51,0.5);}
+
+/* Footer */
+footer { text-align:center; padding:25px; font-weight:500; color:#555; }
+
+/* Animations */
+@keyframes fadeInUp { from { opacity:0; transform:translateY(40px); } to { opacity:1; transform:translateY(0); } }
+@keyframes blink { 0%,50%,100%{opacity:1}25%,75%{opacity:0} }
+@keyframes pulse { 0%,100%{transform:scale(1)}50%{transform:scale(1.05)} }
+@keyframes gradientMove { 0%{background-position:0%}100%{background-position:100%} }
+/* Remove underline from all links in navbar and buttons */
+.navbar a,
+.btn-primary,
+.btn-nav {
+    text-decoration: none; /* Remove underline */
+}
+/* Make all navbar links button-like */
+.navbar a {
+    text-decoration: none;          /* Remove underline */
+    padding: 8px 18px;              /* Add padding like button */
+    border-radius: 30px;            /* Rounded pill shape */
+    font-weight: 600;               /* Bold text */
+    transition: 0.3s;               /* Smooth transition */
+    background: var(--accent);      /* Base color */
+    color: #fff;                     /* White text */
+    box-shadow: 0 0 10px rgba(19,136,8,0.4);  /* Subtle glow */
+}
+
+/* Hover effect for navbar links */
+.navbar a:hover {
+    background: var(--accent2);              /* Gradient accent color */
+    box-shadow: 0 0 20px rgba(255,153,51,0.5); /* Glow on hover */
+    transform: scale(1.05);                  /* Slight scale-up */
+}
+/* Logo wrapper */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Logo box – simple, no effect */
+.logo-box {
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    width: auto;
+    height: auto;
+}
+
+/* Logo image – clean */
+.logo-img {
+    width: 34px;
+    height: auto;
+    filter: none;
+}
+
+/* ✅ LOGO NAME – AS IT IS (NO CHANGE) */
+.logo-text {
+    font-size: 1.7rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, #ff9933, #138808);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 0.5px;
+}
+
+/* Remove all hover effects */
+.logo:hover * {
+    box-shadow: none;
+    filter: none;
+    transform: none;
+    letter-spacing: 0.5px;
+}
+/* Logo wrapper – whole area hover trigger */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+/* Logo image */
+.logo-img {
+    width: 34px;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+/* Logo text – AS IT IS */
+.logo-text {
+    font-size: 1.7rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, #ff9933, #138808);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+/* ✅ TOGGLE EFFECT – same trigger for both */
+.logo:hover .logo-text,
+.logo:hover .logo-img {
+    transform: scale(1.08);   /* same effect */
+}
+/* Common interactive toggle effect */
+.navbar a,
+.btn-primary,
+.btn-nav,
+#signBtn {
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+/* SAME toggle like logo */
+.navbar a:hover,
+.btn-primary:hover,
+.btn-nav:hover,
+#signBtn:hover {
+    transform: scale(1.08);
+}
+.navbar a:hover {
+    opacity: 0.85;
+}
+/* Make all clickable items transform-ready */
+.navbar a,
+.btn-primary,
+.btn-nav,
+#signBtn {
+    display: inline-flex;          /* 🔑 IMPORTANT */
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+/* SAME logo-like toggle */
+.navbar a:hover,
+.btn-primary:hover,
+.btn-nav:hover,
+#signBtn:hover {
+    transform: scale(1.08);
+}
